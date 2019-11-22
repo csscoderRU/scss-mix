@@ -1,0 +1,49 @@
+///* container */
+///***********************************************/
+
+@mixin container-fluid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $ss-layout-gutter/2;
+  padding-left: $ss-layout-gutter/2;
+}
+
+@mixin container($break1:null, $break2:null) {
+  @include container-fluid;
+  @if not $break1 and not $break2 {
+    @each $breakpoint, $value_media in $ss-media-breakpoints {
+      @media (min-width: $value_media) {
+        max-width: $value_media - $ss-layout-gutter * 2;
+      }
+    }
+  } @else if $break1 and not $break2 {
+    $stop1: null;
+    @each $breakpoint, $value_media in $ss-media-breakpoints {
+      @if $breakpoint == $break1 {
+        $stop1: true;
+      }
+      @if $stop1 {
+        @media (min-width: $value_media) {
+          max-width: $value_media - $ss-layout-gutter * 2;
+        }
+      }
+    }
+  } @else if $break1 and $break2 {
+    $stop1: null;
+    $stop2: null;
+    @each $breakpoint, $value_media in $ss-media-breakpoints {
+      @if $breakpoint == $break1 {
+        $stop1: true;
+      }
+      @if $breakpoint == $break2 {
+        $stop2: true;
+      }
+      @if $stop1 and not $stop2 {
+        @media (min-width: $value_media) {
+          max-width: $value_media - $ss-layout-gutter * 2;
+        }
+      }
+    }
+  }
+}

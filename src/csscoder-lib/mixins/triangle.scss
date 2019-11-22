@@ -1,0 +1,89 @@
+//.triangle-1 {
+//  @include triangle(up, 20px, $color: #ffe619); //20px wide and 20px high
+//}
+//
+//.triangle-2 {
+//  @include triangle(down, 20px 20px, $color: #ff3005); //20px wide and 20px high
+//}
+//
+//.triangle-3 {
+//  @include triangle(left, 20px 10px, $color: #ffaf14); //20px wide and 10px high
+//}
+//
+//.triangle-4 {
+//  @include triangle(down, 20px 5px, $color: #ff1870); //20px wide and 5px high
+//}
+//
+//.triangle-5 {
+//  @include triangle(right, 20px 10px 5px, $color: #ff28ca, $before: true); //weird! three different border sizes makes 10px high and 25px wide
+//}
+
+@mixin ui_triangle($direction: down, $size: 16px, $color: #20ba5b){
+  @include triangle_helper($direction, $size, $color, false);
+}
+
+@mixin ui_triangle_em($direction: down, $size: 16px, $color: #20ba5b){
+  @include triangle_helper($direction, $size, $color, true);
+}
+
+@mixin triangle_helper($direction, $size, $color,$isEM: false ){
+  $w: null;
+  $h: null;
+  $c: null;
+
+  $lengthSizeProps: length($size);
+
+  @each $item in $size {
+    $index: index(($size), ($item));
+    $value: _strip-unit($item)*1px;
+    @if $isEM {
+      $value: em($value);
+    }
+    @if($index == 1) {
+      $w: $value;
+      $h: $value;
+      $c: $value;
+    }
+    @if($index == 2) {
+      $h: $value;
+      $c: $value;
+    }
+    @if($index == 3) {
+      $c: $value;
+    }
+  }
+
+  $wHelper: $w;
+  $wHelper2: $c;
+
+  @if ($lengthSizeProps < 3) {
+    $wHelper: _precision_round($w/2, 4);
+    $wHelper2: _precision_round($w/2, 4);
+  } @else {
+    $wHelper: $wHelper - $wHelper2;
+  }
+
+  @if $direction == "down" {
+    border-top: $h solid $color;
+    border-right: $wHelper  solid transparent;
+    border-left: $wHelper2 solid transparent;
+  }
+
+  @if $direction == "up" {
+    border-bottom: $h solid $color;
+    border-right: $wHelper solid transparent;
+    border-left: $wHelper2 solid transparent;
+  }
+
+  @if $direction == "left" {
+    border-right: $h solid $color;
+    border-bottom: $wHelper solid transparent;
+    border-top: $wHelper2 solid transparent;
+  }
+
+  @if $direction == "right" {
+    border-left: $h solid $color;
+    border-bottom: $wHelper solid transparent;
+    border-top: $wHelper2 solid transparent;
+  }
+}

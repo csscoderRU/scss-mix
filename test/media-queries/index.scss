@@ -1,0 +1,39 @@
+@import "../../src/csscoder-lib/csscoder-lib";
+
+.block1 {
+  display: block;
+
+  @include mq(sm) {
+    display: none;
+  }
+}
+
+.block2 {
+  display: block;
+
+  @include mq-less(md) {
+    display: flex;
+  }
+}
+
+.block3 {
+  display: block;
+
+  @include mq-only(lg) {
+    display: none;
+  }
+}
+
+.block4 {
+  display: block;
+
+  @include mq-range(lg, sm) {
+    display: none;
+  }
+
+  @include mq-range(lg, xl) {
+    display: flex;
+  }
+}
+
+

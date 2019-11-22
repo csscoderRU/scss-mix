@@ -1,0 +1,23 @@
+// using @include ui_col(3, 4);
+// using @include ui_col(4, 4, 20px, 24);
+// using @include ui_col_offset(4);
+
+@mixin col($col, $length_line:1, $gutter: $ss-layout-gutter, $size: $ss-columns-size, $unit: px ) {
+  $_gutter: _strip-unit($gutter);
+  $s1: _precision_round($col / $size, 5);
+  $s2: _precision_round($s1 * 100, 4);
+  $s3: _precision_round($_gutter - $_gutter * $s1, 5);
+  width: calc(#{$s2+'%'} - #{$s3+$unit});
+  margin-right: $_gutter+px;
+  &:nth-child(#{$length_line}n) {
+    margin-right: 0;
+  }
+}
+
+@mixin col-offset($col, $gutter: $ss-layout-gutter, $size: $ss-columns-size, $unit: px ) {
+  $_gutter: _strip-unit($gutter);
+  $s1: _precision_round($col / $size, 4);
+  $s2: _precision_round($s1 * 100, 4);
+  $s3: _precision_round($_gutter - $_gutter * $s1, 4);
+  margin-left: calc(#{$s2+'%'} + #{$s3+$unit});
+}

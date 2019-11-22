@@ -1,0 +1,17 @@
+@import "../../src/csscoder-lib/csscoder-lib";
+
+.container1 {
+  @include container-fluid;
+}
+
+.container2 {
+  @include container;
+}
+
+.container3 {
+  @include container(lg);
+}
+
+.container4 {
+  @include container(lg, true);
+}

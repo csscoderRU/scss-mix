@@ -1,0 +1,35 @@
+{
+  "name": "csscoder-ui",
+  "version": "1.0.1",
+  "description": "CSSCODER UI",
+  "main": "src/mixins/ui-mixins.scss",
+  "scripts": {
+    "dev": "vuepress dev vpress",
+    "build": "vuepress build vpress",
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csscoderRU/csscoder-ui.git"
+  },
+  "keywords": [
+    "csscoder",
+    "ui",
+    "scss"
+  ],
+  "directories": {
+    "lib": "src/mixins"
+  },
+  "author": "Aleksandr Zidyganov <alex@csscoder.pro> (https://csscoder.pro/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/csscoderRU/csscoder-ui/issues"
+  },
+  "homepage": "https://github.com/csscoderRU/csscoder-ui#readme",
+  "devDependencies": {
+    "ava": "2.4.0",
+    "node-sass": "4.13.0",
+    "sass-loader": "8.0.0",
+    "vuepress": "1.2.0"
+  }
+}

@@ -1,0 +1,16 @@
+@import "../../src/csscoder-lib/csscoder-lib";
+
+$ss-media_breakpoints: (
+  phone: 576px,
+  tablet: 768px,
+  laptop: 992px,
+  decktop: 1200px
+);
+
+.block {
+  display: block;
+
+  @include mq-range(phone, tablet) {
+    display: none;
+  }
+}

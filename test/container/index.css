@@ -1,0 +1,91 @@
+.container1 {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.container2 {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 480px) {
+  .container2 {
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container2 {
+    max-width: 546px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container2 {
+    max-width: 738px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container2 {
+    max-width: 962px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container2 {
+    max-width: 1170px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container2 {
+    max-width: 1570px;
+  }
+}
+
+.container3 {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+  .container3 {
+    max-width: 962px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container3 {
+    max-width: 1170px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container3 {
+    max-width: 1570px;
+  }
+}
+
+.container4 {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+  .container4 {
+    max-width: 962px;
+  }
+}

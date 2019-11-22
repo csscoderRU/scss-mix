@@ -1,0 +1,32 @@
+@import "../../src/csscoder-lib/csscoder-lib";
+
+.d {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -20px;
+
+  &__i {
+    margin-top: 20px;
+    height: 20px;
+    background-color: green;
+    @include col(3, 4);
+  }
+}
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  &__section-left {
+    @include col(3, 2, 5%);
+    @include col-offset(1, 5%);
+    background-color: red;
+    height: 200px;
+  }
+
+  &__section-right {
+    @include col(8, 2, 5%);
+    background-color: green;
+    height: 212px;
+  }
+}

@@ -1,0 +1,30 @@
+// Transitions
+// @include ui_tr(width);
+// @include ui_tr(width height opacity, 100);
+// @include ui_tr(props, duration, function, delay);
+
+@mixin ui_tr($props: all, $duration: $ui_tr_duration, $function: $ui_tr_function, $delay: 0 ) {
+
+  $_duration: ui_strip-units($duration)*1ms;
+  $_delay: ui_strip-units($delay)*1ms;
+
+  @if type-of($props) == list {
+    $tr_values: ();
+    @each $item in $props {
+      @if($_delay){
+        $tr_values: append($tr_values, #{$item} $_duration $function $_delay, comma);
+      } @else {
+        $tr_values: append($tr_values, #{$item} $_duration $function, comma);
+      }
+    }
+    transition: $tr_values;
+  }
+
+  @else {
+    @if($_delay){
+      transition: #{$props} $_duration $function $_delay;
+    } @else {
+      transition: #{$props} $_duration $function;
+    }
+  }
+}

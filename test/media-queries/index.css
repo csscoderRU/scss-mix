@@ -1,0 +1,45 @@
+.block1 {
+  display: block;
+}
+
+@media only screen and (min-width: 576px) {
+  .block1 {
+    display: none;
+  }
+}
+
+.block2 {
+  display: block;
+}
+
+@media only screen and (max-width: 767px) {
+  .block2 {
+    display: flex;
+  }
+}
+
+.block3 {
+  display: block;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .block3 {
+    display: none;
+  }
+}
+
+.block4 {
+  display: block;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+  .block4 {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .block4 {
+    display: flex;
+  }
+}
