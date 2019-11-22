@@ -177,9 +177,9 @@ $ss-base-font-size: 16px !default;
 ///* columns */
 @mixin col($col, $length_line:1, $gutter: $ss-layout-gutter, $size: $ss-columns-size ) {
   $_gutter: _strip-unit($gutter);
-  $s1: _precision_round($col / $size);
+  $s1: _precision_round($col / $size, 7);
   $s2: _precision_round($s1 * 100);
-  $s3: _precision_round($_gutter - $_gutter * $s1 + 1/$size);
+  $s3: _precision_round($_gutter - $_gutter * $s1);
   $unit: unit($gutter);
   @if $unit == '' {
     $unit: 'px';
@@ -199,9 +199,9 @@ $ss-base-font-size: 16px !default;
 
 @mixin col-offset($col, $gutter: $ss-layout-gutter, $size: $ss-columns-size ) {
   $_gutter: _strip-unit($gutter);
-  $s1: _precision_round($col / $size);
+  $s1: _precision_round($col / $size, 7);
   $s2: _precision_round($s1 * 100);
-  $s3: _precision_round($_gutter * $s1 - 1/$size);
+  $s3: _precision_round($_gutter * $s1);
   $unit: unit($gutter);
   @if $unit == '' {
     $unit: px;
