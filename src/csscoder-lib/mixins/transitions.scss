@@ -3,28 +3,31 @@
 // @include ui_tr(width height opacity, 100);
 // @include ui_tr(props, duration, function, delay);
 
-@mixin ui_tr($props: all, $duration: $ui_tr_duration, $function: $ui_tr_function, $delay: 0 ) {
+///* Transitions */
+@mixin tr($props: all, $duration: $ss-tr-duration, $function: $ss-tr-function, $delay: null ) {
 
-  $_duration: ui_strip-units($duration)*1ms;
-  $_delay: ui_strip-units($delay)*1ms;
+  $duration: _strip-unit($duration)*1ms;
+  @if $delay {
+    $delay: _strip-unit($delay)*1ms;
+  }
 
   @if type-of($props) == list {
     $tr_values: ();
     @each $item in $props {
-      @if($_delay){
-        $tr_values: append($tr_values, #{$item} $_duration $function $_delay, comma);
+      @if $delay {
+        $tr_values: append($tr_values, #{$item} $duration $function $delay, comma);
       } @else {
-        $tr_values: append($tr_values, #{$item} $_duration $function, comma);
+        $tr_values: append($tr_values, #{$item} $duration $function, comma);
       }
     }
     transition: $tr_values;
   }
 
   @else {
-    @if($_delay){
-      transition: #{$props} $_duration $function $_delay;
+    @if $delay {
+      transition: #{$props} $duration $function $delay;
     } @else {
-      transition: #{$props} $_duration $function;
+      transition: #{$props} $duration $function;
     }
   }
 }

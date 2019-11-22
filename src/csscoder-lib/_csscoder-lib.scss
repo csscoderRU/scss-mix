@@ -212,3 +212,33 @@ $ss-base-font-size: 16px !default;
     margin-left: calc(#{$s2+'%'} + #{$s3+$unit});
   }
 }
+
+
+///* Transitions */
+@mixin tr($props: all, $duration: $ss-tr-duration, $function: $ss-tr-function, $delay: null ) {
+
+  $duration: _strip-unit($duration)*1ms;
+  @if $delay {
+    $delay: _strip-unit($delay)*1ms;
+  }
+
+  @if type-of($props) == list {
+    $tr_values: ();
+    @each $item in $props {
+      @if $delay {
+        $tr_values: append($tr_values, #{$item} $duration $function $delay, comma);
+      } @else {
+        $tr_values: append($tr_values, #{$item} $duration $function, comma);
+      }
+    }
+    transition: $tr_values;
+  }
+
+  @else {
+    @if $delay {
+      transition: #{$props} $duration $function $delay;
+    } @else {
+      transition: #{$props} $duration $function;
+    }
+  }
+}

@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/csscoderRU/csscoder-ui#readme",
   "devDependencies": {
+    "@vuepress/plugin-google-analytics": "^1.2.0",
     "ava": "2.4.0",
     "node-sass": "4.13.0",
     "sass-loader": "8.0.0",
