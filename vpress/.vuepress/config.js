@@ -39,9 +39,9 @@ module.exports = {
         collapsable: true,
         sidebarDepth: 1,
         path: '/examples/',
-        children: [
-          ['/examples/userpic/', 'User picture']
-        ]
+        // children: [
+        //   ['/examples/userpic/', 'User picture']
+        // ]
       },
     ]
   }

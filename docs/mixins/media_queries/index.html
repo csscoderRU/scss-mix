@@ -3,141 +3,26 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Media Queries Mixin | CSSCODER UI</title>
-    <meta name="description" content="Just playing around">
+    <title>SCSS Media Queries Mixin | CSSCODER | SCSS MIX</title>
+    <meta name="description" content="SCSS parts of code, which work in my practice">
     
     
-    <link rel="preload" href="/assets/css/0.styles.b4b7b21d.css" as="style"><link rel="preload" href="/assets/js/app.9eea341f.js" as="script"><link rel="preload" href="/assets/js/2.38e7963b.js" as="script"><link rel="preload" href="/assets/js/9.60f2e0db.js" as="script"><link rel="prefetch" href="/assets/js/10.9638fb71.js"><link rel="prefetch" href="/assets/js/11.0f2a7d44.js"><link rel="prefetch" href="/assets/js/12.ba774805.js"><link rel="prefetch" href="/assets/js/13.e2e7d87d.js"><link rel="prefetch" href="/assets/js/14.f1b130a7.js"><link rel="prefetch" href="/assets/js/3.c6a9f80c.js"><link rel="prefetch" href="/assets/js/4.c4832647.js"><link rel="prefetch" href="/assets/js/5.c17a482b.js"><link rel="prefetch" href="/assets/js/6.cee82279.js"><link rel="prefetch" href="/assets/js/7.c16de0e8.js"><link rel="prefetch" href="/assets/js/8.8303aa97.js">
-    <link rel="stylesheet" href="/assets/css/0.styles.b4b7b21d.css">
+    <link rel="preload" href="/assets/css/0.styles.99d7e448.css" as="style"><link rel="preload" href="/assets/js/app.06b457e3.js" as="script"><link rel="preload" href="/assets/js/2.8e0f1cb4.js" as="script"><link rel="preload" href="/assets/js/15.9b121609.js" as="script"><link rel="prefetch" href="/assets/js/10.d1763c00.js"><link rel="prefetch" href="/assets/js/11.ed73e9d4.js"><link rel="prefetch" href="/assets/js/12.b6c84919.js"><link rel="prefetch" href="/assets/js/13.703452a1.js"><link rel="prefetch" href="/assets/js/14.91ba1dfd.js"><link rel="prefetch" href="/assets/js/16.09a8d725.js"><link rel="prefetch" href="/assets/js/17.f5fc8375.js"><link rel="prefetch" href="/assets/js/18.4a26d176.js"><link rel="prefetch" href="/assets/js/3.6b0d47ed.js"><link rel="prefetch" href="/assets/js/4.59116900.js"><link rel="prefetch" href="/assets/js/5.a9f677ad.js"><link rel="prefetch" href="/assets/js/6.74465cf9.js"><link rel="prefetch" href="/assets/js/7.ef7a7185.js"><link rel="prefetch" href="/assets/js/8.f78c5cf9.js"><link rel="prefetch" href="/assets/js/9.2f4dfe06.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.99d7e448.css">
   </head>
   <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">CSSCODER UI</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/ui/" class="nav-link">UI Elements</a></div><div class="nav-item"><a href="/mixins/" class="nav-link router-link-active">Mixins</a></div><div class="nav-item"><a href="https://csscoder.pro" target="_blank" rel="noopener noreferrer" class="nav-link external">
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">SCSS MIX</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://csscoder.pro" target="_blank" rel="noopener noreferrer" class="nav-link external">
   CSSCODER.PRO
-  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/ui/" class="nav-link">UI Elements</a></div><div class="nav-item"><a href="/mixins/" class="nav-link router-link-active">Mixins</a></div><div class="nav-item"><a href="https://csscoder.pro" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://csscoder.pro" target="_blank" rel="noopener noreferrer" class="nav-link external">
   CSSCODER.PRO
-  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/ui/" class="sidebar-heading clickable"><span>UI Elements</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/mixins/" class="sidebar-heading clickable router-link-active open"><span>SCSS Mixins/Functions</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/mixins/media_queries/" class="active sidebar-link">Media Queries</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/mixins/media_queries/#mq-breakpointname" class="sidebar-link">mq(breakpointName)</a></li><li class="sidebar-sub-header"><a href="/mixins/media_queries/#mq-less-breakpointname" class="sidebar-link">mq_less(breakpointName)</a></li><li class="sidebar-sub-header"><a href="/mixins/media_queries/#mq-only-breakpointname" class="sidebar-link">mq_only(breakpointName)</a></li><li class="sidebar-sub-header"><a href="/mixins/media_queries/#mq-range-breakpointname1-breakpointname2" class="sidebar-link">mq_range(breakpointName1, breakpointName2)</a></li><li class="sidebar-sub-header"><a href="/mixins/media_queries/#default-variables" class="sidebar-link">Default variables</a></li><li class="sidebar-sub-header"><a href="/mixins/media_queries/#customize" class="sidebar-link">Customize</a></li></ul></li><li><a href="/mixins/px2em/" class="sidebar-link">Convert PX to EM</a></li><li><a href="/mixins/base_container/" class="sidebar-link">Base content container</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="media-queries-mixin"><a href="#media-queries-mixin" class="header-anchor">#</a> Media Queries Mixin</h1> <h3 id="default-breakpoints"><a href="#default-breakpoints" class="header-anchor">#</a> Default breakpoints</h3> <p>Available names of media queries breakpoints</p> <table><thead><tr><th style="text-align:left;">Name</th> <th style="text-align:left;">Value</th> <th style="text-align:left;">Associate</th></tr></thead> <tbody><tr><td style="text-align:left;"><strong>xs</strong></td> <td style="text-align:left;">480px</td> <td style="text-align:left;">extra small</td></tr> <tr><td style="text-align:left;"><strong>sm</strong></td> <td style="text-align:left;">576px</td> <td style="text-align:left;">small</td></tr> <tr><td style="text-align:left;"><strong>md</strong></td> <td style="text-align:left;">768px</td> <td style="text-align:left;">medium</td></tr> <tr><td style="text-align:left;"><strong>lg</strong></td> <td style="text-align:left;">992px</td> <td style="text-align:left;">large</td></tr> <tr><td style="text-align:left;"><strong>xl</strong></td> <td style="text-align:left;">1200px</td> <td style="text-align:left;">extra large</td></tr> <tr><td style="text-align:left;"><strong>xxl</strong></td> <td style="text-align:left;">1600px</td> <td style="text-align:left;">double extra large</td></tr></tbody></table> <h3 id="available-variants-to-use"><a href="#available-variants-to-use" class="header-anchor">#</a> Available variants to use</h3> <table><thead><tr><th style="text-align:left;">Name of mixin</th> <th style="text-align:left;">Example</th> <th style="text-align:left;">Associate</th></tr></thead> <tbody><tr><td style="text-align:left;"><strong>mq</strong></td> <td style="text-align:left;">mq($bp){}</td> <td style="text-align:left;">(min-width: $bp){}</td></tr> <tr><td style="text-align:left;"><strong>mq_less</strong></td> <td style="text-align:left;">mq_less($bp){}</td> <td style="text-align:left;">(max-width: $bp){}</td></tr> <tr><td style="text-align:left;"><strong>mq_only</strong></td> <td style="text-align:left;">mq_only($bp){}</td> <td style="text-align:left;">(min-width: $bp) and (max-width: $bpNext){}</td></tr> <tr><td style="text-align:left;"><strong>mq_range</strong></td> <td style="text-align:left;">mq_range($bp1, $bp2){}</td> <td style="text-align:left;">(min-width: $bp1) and (max-width: $bp2){}</td></tr></tbody></table> <h2 id="mq-breakpointname"><a href="#mq-breakpointname" class="header-anchor">#</a> mq(breakpointName)</h2> <p>at result, we will get <code>@media only screen and (min-width: ...px){...}</code></p> <div class="language-scss extra-class"><div class="highlight-lines"><br><br><div class="highlighted"> </div><br><br><div class="highlighted"> </div><br><br><div class="highlighted"> </div><br><br><br><br></div><pre class="language-scss"><code><span class="token selector">.block </span><span class="token punctuation">{</span>
-  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
-  <span class="token keyword">@include</span> <span class="token function">mq</span><span class="token punctuation">(</span>sm<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">@include</span> <span class="token function">mq</span><span class="token punctuation">(</span>md<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">@include</span> <span class="token function">mq</span><span class="token punctuation">(</span>lg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> inline-flex<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/mixins/" class="sidebar-heading clickable router-link-active open"><span>SCSS Mixins</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/mixins/media_queries/" class="active sidebar-link">Media Queries</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/mixins/media_queries/#mq-x" class="sidebar-link">mq(x)</a></li><li class="sidebar-sub-header"><a href="/mixins/media_queries/#mq-less-x" class="sidebar-link">mq-less(x)</a></li><li class="sidebar-sub-header"><a href="/mixins/media_queries/#mq-only-x" class="sidebar-link">mq-only(x)</a></li><li class="sidebar-sub-header"><a href="/mixins/media_queries/#mq-range-x-y" class="sidebar-link">mq-range(x,y)</a></li><li class="sidebar-sub-header"><a href="/mixins/media_queries/#customize" class="sidebar-link">Customize</a></li></ul></li><li><a href="/mixins/base_container/" class="sidebar-link">Base content container</a></li><li><a href="/mixins/columns/" class="sidebar-link">Columns</a></li><li><a href="/mixins/transitions/" class="sidebar-link">Transitions</a></li><li><a href="/mixins/triangle/" class="sidebar-link">Triangle</a></li><li><a href="/mixins/font_scale/" class="sidebar-link">Font scale</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/functions/" class="sidebar-heading clickable"><span>SCSS Functions</span> <span class="arrow right"></span></a> <!----></section></li><li><a href="/examples/" class="sidebar-link">Examples using</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="media-queries-mixin"><a href="#media-queries-mixin" class="header-anchor">#</a> Media Queries Mixin</h1> <h3 id="using"><a href="#using" class="header-anchor">#</a> Using</h3> <div class="language-scss extra-class"><div class="highlight-lines"><br><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><br><br></div><pre class="language-scss"><code><span class="token selector">.block </span><span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> <span class="token function">mq</span><span class="token punctuation">(</span>xl<span class="token punctuation">)</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span>
+  <span class="token keyword">@include</span> <span class="token function">mq-less</span><span class="token punctuation">(</span>sm<span class="token punctuation">)</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span>
+  <span class="token keyword">@include</span> <span class="token function">mq-only</span><span class="token punctuation">(</span>md<span class="token punctuation">)</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span>
+  <span class="token keyword">@include</span> <span class="token function">mq-range</span><span class="token punctuation">(</span>md<span class="token punctuation">,</span> lg<span class="token punctuation">)</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre></div><p>result</p> <div class="language-css extra-class"><div class="highlight-lines"><br><br><br><div class="highlighted"> </div><br><br><br><br><div class="highlighted"> </div><br><br><br><br><div class="highlighted"> </div><br><br><br><br><br></div><pre class="language-css"><code><span class="token selector">.block</span> <span class="token punctuation">{</span>
-  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token atrule"><span class="token rule">@media</span> only screen and <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 576px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
-  <span class="token selector">.block</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span class="token atrule"><span class="token rule">@media</span> only screen and <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 768px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
-  <span class="token selector">.block</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span class="token atrule"><span class="token rule">@media</span> only screen and <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 992px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
-  <span class="token selector">.block</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> inline-flex<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre></div><h2 id="mq-less-breakpointname"><a href="#mq-less-breakpointname" class="header-anchor">#</a> mq_less(breakpointName)</h2> <p>at result, we will get <code>@media only screen and (max-width: ...px){...}</code></p> <div class="language-scss extra-class"><div class="highlight-lines"><br><br><div class="highlighted"> </div><br><br><div class="highlighted"> </div><br><br><div class="highlighted"> </div><br><br><br><br></div><pre class="language-scss"><code><span class="token selector">.block </span><span class="token punctuation">{</span>
-  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
-  <span class="token keyword">@include</span> mq_<span class="token function">less</span><span class="token punctuation">(</span>sm<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">@include</span> mq_<span class="token function">less</span><span class="token punctuation">(</span>md<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">@include</span> mq_<span class="token function">less</span><span class="token punctuation">(</span>lg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> inline-flex<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre></div><p>result</p> <div class="language-css extra-class"><div class="highlight-lines"><br><br><br><div class="highlighted"> </div><br><br><br><br><div class="highlighted"> </div><br><br><br><br><div class="highlighted"> </div><br><br><br><br><br></div><pre class="language-css"><code><span class="token selector">.block</span> <span class="token punctuation">{</span>
-  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token atrule"><span class="token rule">@media</span> only screen and <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 575px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
-  <span class="token selector">.block</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span class="token atrule"><span class="token rule">@media</span> only screen and <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 767px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
-  <span class="token selector">.block</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span class="token atrule"><span class="token rule">@media</span> only screen and <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 991px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
-  <span class="token selector">.block</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> inline-flex<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre></div><h2 id="mq-only-breakpointname"><a href="#mq-only-breakpointname" class="header-anchor">#</a> mq_only(breakpointName)</h2> <p>at result, we will get <code>@media only screen and(min-width: ...px) and (max-width: ...px){...}</code></p> <div class="language-scss extra-class"><div class="highlight-lines"><br><br><div class="highlighted"> </div><br><br><div class="highlighted"> </div><br><br><div class="highlighted"> </div><br><br><br><br></div><pre class="language-scss"><code><span class="token selector">.block </span><span class="token punctuation">{</span>
-  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
-  <span class="token keyword">@include</span> mq_<span class="token function">only</span><span class="token punctuation">(</span>sm<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">@include</span> mq_<span class="token function">only</span><span class="token punctuation">(</span>md<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">@include</span> mq_<span class="token function">only</span><span class="token punctuation">(</span>lg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> inline-flex<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre></div><p>result</p> <div class="language-css extra-class"><div class="highlight-lines"><br><br><br><div class="highlighted"> </div><br><br><br><br><div class="highlighted"> </div><br><br><br><br><div class="highlighted"> </div><br><br><br><br><br></div><pre class="language-css"><code><span class="token selector">.block</span> <span class="token punctuation">{</span>
-  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token atrule"><span class="token rule">@media</span> only screen and <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 576px<span class="token punctuation">)</span> and <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 767px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
-  <span class="token selector">.block</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span class="token atrule"><span class="token rule">@media</span> only screen and <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 768px<span class="token punctuation">)</span> and <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 991px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
-  <span class="token selector">.block</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span class="token atrule"><span class="token rule">@media</span> only screen and <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 992px<span class="token punctuation">)</span> and <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 1199px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
-  <span class="token selector">.block</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> inline-flex<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre></div><h2 id="mq-range-breakpointname1-breakpointname2"><a href="#mq-range-breakpointname1-breakpointname2" class="header-anchor">#</a> mq_range(breakpointName1, breakpointName2)</h2> <p><strong>Order is not important</strong>, at result, we will get <code>@media only screen and(min-width: ...px) and (max-width: ...px){...}</code></p> <div class="language-scss extra-class"><div class="highlight-lines"><br><br><div class="highlighted"> </div><br><br><div class="highlighted"> </div><br><br><div class="highlighted"> </div><br><br><br><br></div><pre class="language-scss"><code><span class="token selector">.block </span><span class="token punctuation">{</span>
-  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
-  <span class="token keyword">@include</span> mq_<span class="token function">range</span><span class="token punctuation">(</span>lg<span class="token punctuation">,</span> sm<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">@include</span> mq_<span class="token function">range</span><span class="token punctuation">(</span>lg<span class="token punctuation">,</span> xl<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">@include</span> mq_<span class="token function">range</span><span class="token punctuation">(</span>sm<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> inline-flex<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre></div><p>result</p> <div class="language-css extra-class"><div class="highlight-lines"><br><br><br><div class="highlighted"> </div><br><br><br><br><div class="highlighted"> </div><br><br><br><br><div class="highlighted"> </div><br><br><br><br><br></div><pre class="language-css"><code><span class="token selector">.block</span> <span class="token punctuation">{</span>
-  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token atrule"><span class="token rule">@media</span> only screen and <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 576px<span class="token punctuation">)</span> and <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 991px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
-  <span class="token selector">.block</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span class="token atrule"><span class="token rule">@media</span> only screen and <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 992px<span class="token punctuation">)</span> and <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 1199px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
-  <span class="token selector">.block</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span class="token atrule"><span class="token rule">@media</span> only screen and <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 576px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
-  <span class="token selector">.block</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> inline-flex<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre></div><h2 id="default-variables"><a href="#default-variables" class="header-anchor">#</a> Default variables</h2> <p>by default, we have media queries steps and this base array and media type value.</p> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token property"><span class="token variable">$media_type</span></span><span class="token punctuation">:</span> <span class="token string">'only screen'</span> <span class="token statement keyword">!default</span><span class="token punctuation">;</span>
-
-<span class="token property"><span class="token variable">$media_breakpoints</span></span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+</code></pre></div><h3 id="breakpoints-by-default"><a href="#breakpoints-by-default" class="header-anchor">#</a> Breakpoints by default</h3> <p>Available names of media queries breakpoints</p> <table><thead><tr><th style="text-align:left;">Name</th> <th style="text-align:left;">Value</th> <th style="text-align:left;">Associate</th></tr></thead> <tbody><tr><td style="text-align:left;"><strong>xs</strong></td> <td style="text-align:left;">480px</td> <td style="text-align:left;">extra small</td></tr> <tr><td style="text-align:left;"><strong>sm</strong></td> <td style="text-align:left;">576px</td> <td style="text-align:left;">small</td></tr> <tr><td style="text-align:left;"><strong>md</strong></td> <td style="text-align:left;">768px</td> <td style="text-align:left;">medium</td></tr> <tr><td style="text-align:left;"><strong>lg</strong></td> <td style="text-align:left;">992px</td> <td style="text-align:left;">large</td></tr> <tr><td style="text-align:left;"><strong>xl</strong></td> <td style="text-align:left;">1200px</td> <td style="text-align:left;">extra large</td></tr> <tr><td style="text-align:left;"><strong>xxl</strong></td> <td style="text-align:left;">1600px</td> <td style="text-align:left;">double extra large</td></tr></tbody></table> <h3 id="default-variables"><a href="#default-variables" class="header-anchor">#</a> Default variables</h3> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token property"><span class="token variable">$ss-media-type</span></span><span class="token punctuation">:</span> <span class="token string">'only screen'</span> <span class="token statement keyword">!default</span><span class="token punctuation">;</span>
+<span class="token property"><span class="token variable">$ss-media-breakpoints</span></span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
   <span class="token property">xs</span><span class="token punctuation">:</span> 480px<span class="token punctuation">,</span>
   <span class="token property">sm</span><span class="token punctuation">:</span> 576px<span class="token punctuation">,</span>
   <span class="token property">md</span><span class="token punctuation">:</span> 768px<span class="token punctuation">,</span>
@@ -145,7 +30,91 @@
   <span class="token property">xl</span><span class="token punctuation">:</span> 1200px<span class="token punctuation">,</span>
   <span class="token property">xxl</span><span class="token punctuation">:</span> 1600px
 <span class="token punctuation">)</span> <span class="token statement keyword">!default</span><span class="token punctuation">;</span>
-</code></pre></div><p>You can customize this, change value, change length, and change name steps.</p> <h2 id="customize"><a href="#customize" class="header-anchor">#</a> Customize</h2> <p>For customize, you must create variable before &quot;CSSCODER-UI&quot; importing to your main SCSS file.</p> <div class="language-scss extra-class"><div class="highlight-lines"><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlighted"> </div><br><br><br><br></div><pre class="language-scss"><code><span class="token property"><span class="token variable">$media_breakpoints</span></span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+</code></pre></div><h3 id="available-variants-to-use"><a href="#available-variants-to-use" class="header-anchor">#</a> Available variants to use</h3> <table><thead><tr><th style="text-align:left;">Name of mixin</th> <th style="text-align:left;">Example</th> <th style="text-align:left;">Associate</th></tr></thead> <tbody><tr><td style="text-align:left;"><strong>mq</strong></td> <td style="text-align:left;">mq($bp){}</td> <td style="text-align:left;">(min-width: $bp){}</td></tr> <tr><td style="text-align:left;"><strong>mq-less</strong></td> <td style="text-align:left;">mq-less($bp){}</td> <td style="text-align:left;">(max-width: $bp){}</td></tr> <tr><td style="text-align:left;"><strong>mq-only</strong></td> <td style="text-align:left;">mq-only($bp){}</td> <td style="text-align:left;">(min-width: $bp) and (max-width: $bpNext){}</td></tr> <tr><td style="text-align:left;"><strong>mq-range</strong></td> <td style="text-align:left;">mq-range($bp1, $bp2){}</td> <td style="text-align:left;">(min-width: $bp1) and (max-width: $bp2){}</td></tr></tbody></table> <h2 id="mq-x"><a href="#mq-x" class="header-anchor">#</a> mq(x)</h2> <p>result, we will get <code>@media only screen and (min-width: ...px){...}</code></p> <div class="language-scss extra-class"><div class="highlight-lines"><br><br><br><div class="highlighted"> </div><br><br><br><br><br><br><br><br><br><div class="highlighted"> </div><br><br><br><br><br></div><pre class="language-scss"><code><span class="token selector">.block </span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+
+  <span class="token keyword">@include</span> <span class="token function">mq</span><span class="token punctuation">(</span>sm<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// CSS result</span>
+<span class="token selector">.block </span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@media</span> only screen <span class="token operator">and</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 576px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.block </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="mq-less-x"><a href="#mq-less-x" class="header-anchor">#</a> mq-less(x)</h2> <p>result, we will get <code>@media only screen and (max-width: ...px){...}</code></p> <div class="language-scss extra-class"><div class="highlight-lines"><br><br><br><div class="highlighted"> </div><br><br><br><br><br><br><br><br><br><div class="highlighted"> </div><br><br><br><br><br></div><pre class="language-scss"><code><span class="token selector">.block </span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+
+  <span class="token keyword">@include</span> <span class="token function">mq-less</span><span class="token punctuation">(</span>md<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// CSS result</span>
+<span class="token selector">.block </span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@media</span> only screen <span class="token operator">and</span> <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 767px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.block </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="mq-only-x"><a href="#mq-only-x" class="header-anchor">#</a> mq-only(x)</h2> <p>result, we will get <code>@media only screen and(min-width: ...px) and (max-width: ...px){...}</code></p> <div class="language-scss extra-class"><div class="highlight-lines"><br><br><br><div class="highlighted"> </div><br><br><br><br><br><br><br><br><br><div class="highlighted"> </div><br><br><br><br><br></div><pre class="language-scss"><code><span class="token selector">.block </span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+
+  <span class="token keyword">@include</span> <span class="token function">mq-only</span><span class="token punctuation">(</span>lg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// CSS result</span>
+<span class="token selector">.block </span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@media</span> only screen <span class="token operator">and</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 992px<span class="token punctuation">)</span> <span class="token operator">and</span> <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 1199px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.block </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="mq-range-x-y"><a href="#mq-range-x-y" class="header-anchor">#</a> mq-range(x,y)</h2> <p><strong>Order is not important</strong>, at result, we will get <code>@media only screen and(min-width: ...px) and (max-width: ...px){...}</code></p> <div class="language-scss extra-class"><div class="highlight-lines"><br><br><br><div class="highlighted"> </div><br><br><br><div class="highlighted"> </div><br><br><br><br><br><br><br><br><br><div class="highlighted"> </div><br><br><br><br><br><div class="highlighted"> </div><br><br><br><br><br><br></div><pre class="language-scss"><code><span class="token selector">.block </span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+
+  <span class="token keyword">@include</span> <span class="token function">mq-range</span><span class="token punctuation">(</span>lg<span class="token punctuation">,</span> sm<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">@include</span> <span class="token function">mq-range</span><span class="token punctuation">(</span>lg<span class="token punctuation">,</span> xl<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// CSS result</span>
+<span class="token selector">.block </span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@media</span> only screen <span class="token operator">and</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 576px<span class="token punctuation">)</span> <span class="token operator">and</span> <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 991px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.block </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@media</span> only screen <span class="token operator">and</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 992px<span class="token punctuation">)</span> <span class="token operator">and</span> <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 1199px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.block </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h2 id="customize"><a href="#customize" class="header-anchor">#</a> Customize</h2> <p>You can customize this, change value, change length, and change name steps.
+For this, you must create variable before importing to your main SCSS file.</p> <div class="language-scss extra-class"><div class="highlight-lines"><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlighted"> </div><br><br><br><br></div><pre class="language-scss"><code><span class="token property"><span class="token variable">$media_breakpoints</span></span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
   <span class="token property">phone</span><span class="token punctuation">:</span> 576px<span class="token punctuation">,</span>
   <span class="token property">tablet</span><span class="token punctuation">:</span> 768px<span class="token punctuation">,</span>
   <span class="token property">laptop</span><span class="token punctuation">:</span> 992px<span class="token punctuation">,</span>
@@ -158,7 +127,7 @@
 
 <span class="token selector">.block </span><span class="token punctuation">{</span>
   <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
-  <span class="token keyword">@include</span> mq_<span class="token function">range</span><span class="token punctuation">(</span>phone<span class="token punctuation">,</span> tablet<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> <span class="token function">mq-range</span><span class="token punctuation">(</span>phone<span class="token punctuation">,</span> tablet<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
@@ -170,11 +139,9 @@
     <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
-      ←
-      <a href="/ui/buttons/" class="prev">Buttons</a></span> <span class="next"><a href="/mixins/px2em/">Convert PX to EM</a>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/mixins/base_container/">Base content container</a>
       →
     </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/assets/js/app.9eea341f.js" defer></script><script src="/assets/js/2.38e7963b.js" defer></script><script src="/assets/js/9.60f2e0db.js" defer></script>
+    <script src="/assets/js/app.06b457e3.js" defer></script><script src="/assets/js/2.8e0f1cb4.js" defer></script><script src="/assets/js/15.9b121609.js" defer></script>
   </body>
 </html>
