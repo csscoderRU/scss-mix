@@ -3,7 +3,6 @@ lang: en-US
 title: SCSS triangle Mixin | CSSCODER
 ---
 
-# Triangle
 # Triangle mixins
 
 By default, we use these variables.

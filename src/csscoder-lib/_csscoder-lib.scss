@@ -306,3 +306,90 @@ $ss-base-font-size: 16px !default;
     border-top: $wHelper2 solid transparent;
   }
 }
+
+///* Font scale */
+$firstBreakPoint: nth(map-values($ss-media-breakpoints), 1);
+$endBreakPoint: nth(map-values($ss-media-breakpoints), length($ss-media-breakpoints));
+
+@mixin font-scale($font_min: 14px, $font_max: 16px, $width_min: $firstBreakPoint, $width_max: $endBreakPoint, $units: px) {
+  $font_min: _strip-unit($font_min);
+  $font_max: _strip-unit($font_max);
+
+  // reverse fonts sizes if needed
+  $listFonts:  $font_min, $font_max;
+  $font_min: min($listFonts...);
+  $font_max: max($listFonts...);
+
+  @if (map-get($ss-media-breakpoints, $width_min)){
+    $width_min: map-get($ss-media-breakpoints, $width_min);
+  }
+  @if (map-get($ss-media-breakpoints, $width_max)){
+    $width_max: map-get($ss-media-breakpoints, $width_max);
+  }
+
+  $width_min: _strip-unit($width_min);
+  $width_max: _strip-unit($width_max);
+
+  // reverse width sizes if needed
+  $listBreakpoints:  $width_min, $width_max;
+  $width_min: min($listBreakpoints...);
+  $width_max: max($listBreakpoints...);
+
+  @if($font_min > $font_max) {
+    $helper: $font_min;
+    $font_min: $font_max;
+    $font_max: $helper;
+  }
+
+  $k: _precision_round(($font_max - $font_min)/($width_max - $width_min), 4);
+  $b: _precision_round($font_min - $k * $width_min, 4);
+  $l: $k * 100vw;
+
+  font-size: $font_min+$units;
+
+  @media #{$ss-media-type} and (min-width: $width_min+$units) {
+    font-size:  calc( #{$l} + #{$b + $units} );
+  }
+
+  @media #{$ss-media-type} and  (min-width: $width_max+$units) {
+    font-size: $font_max+$units;
+  }
+}
+
+@mixin font-scale-s($font_min: 14px, $font_max: 16px, $width_min: $firstBreakPoint, $width_max: $endBreakPoint, $units: px) {
+  $font_min: _strip-unit($font_min);
+  $font_max: _strip-unit($font_max);
+
+  // reverse fonts sizes if needed
+  $listFonts:  $font_min, $font_max;
+  $font_min: min($listFonts...);
+  $font_max: max($listFonts...);
+
+  @if (map-get($ss-media-breakpoints, $width_min)){
+    $width_min: map-get($ss-media-breakpoints, $width_min);
+  }
+  @if (map-get($ss-media-breakpoints, $width_max)){
+    $width_max: map-get($ss-media-breakpoints, $width_max);
+  }
+
+  $width_min: _strip-unit($width_min);
+  $width_max: _strip-unit($width_max);
+
+  // reverse width sizes if needed
+  $listBreakpoints:  $width_min, $width_max;
+  $width_min: min($listBreakpoints...);
+  $width_max: max($listBreakpoints...);
+
+  @if($font_min > $font_max) {
+    $helper: $font_min;
+    $font_min: $font_max;
+    $font_max: $helper;
+  }
+
+  $k: _precision_round(($font_max - $font_min)/($width_max - $width_min), 4);
+  $b: _precision_round($font_min - $k * $width_min, 4);
+  $l: $k * 100vw;
+
+  font-size:  calc( #{$l} + #{$b + $units} );
+
+}

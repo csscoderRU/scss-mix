@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Font scale | SCSS MIX</title>
+    <title>SCSS Font Scale Mixin | CSSCODER | SCSS MIX</title>
     <meta name="description" content="SCSS parts of code, which work in my practice">
     
     
-    <link rel="preload" href="/assets/css/0.styles.99d7e448.css" as="style"><link rel="preload" href="/assets/js/app.3d2d607b.js" as="script"><link rel="preload" href="/assets/js/2.8e0f1cb4.js" as="script"><link rel="preload" href="/assets/js/14.d6e4fa6a.js" as="script"><link rel="prefetch" href="/assets/js/10.d1763c00.js"><link rel="prefetch" href="/assets/js/11.7ee12c73.js"><link rel="prefetch" href="/assets/js/12.814febab.js"><link rel="prefetch" href="/assets/js/13.bf4997df.js"><link rel="prefetch" href="/assets/js/15.50c98ebf.js"><link rel="prefetch" href="/assets/js/16.14ae5495.js"><link rel="prefetch" href="/assets/js/17.56b7af7d.js"><link rel="prefetch" href="/assets/js/18.4a26d176.js"><link rel="prefetch" href="/assets/js/3.ee3244fb.js"><link rel="prefetch" href="/assets/js/4.59116900.js"><link rel="prefetch" href="/assets/js/5.2c6eff32.js"><link rel="prefetch" href="/assets/js/6.627eaca3.js"><link rel="prefetch" href="/assets/js/7.1312578a.js"><link rel="prefetch" href="/assets/js/8.f78c5cf9.js"><link rel="prefetch" href="/assets/js/9.6392ff31.js">
+    <link rel="preload" href="/assets/css/0.styles.99d7e448.css" as="style"><link rel="preload" href="/assets/js/app.08e4270c.js" as="script"><link rel="preload" href="/assets/js/2.8e0f1cb4.js" as="script"><link rel="preload" href="/assets/js/14.0cc25de1.js" as="script"><link rel="prefetch" href="/assets/js/10.04585224.js"><link rel="prefetch" href="/assets/js/11.6afdac92.js"><link rel="prefetch" href="/assets/js/12.b6c84919.js"><link rel="prefetch" href="/assets/js/13.bf4997df.js"><link rel="prefetch" href="/assets/js/15.c61389ac.js"><link rel="prefetch" href="/assets/js/16.158ec532.js"><link rel="prefetch" href="/assets/js/17.07be62f1.js"><link rel="prefetch" href="/assets/js/18.4a26d176.js"><link rel="prefetch" href="/assets/js/3.ee3244fb.js"><link rel="prefetch" href="/assets/js/4.59116900.js"><link rel="prefetch" href="/assets/js/5.2c6eff32.js"><link rel="prefetch" href="/assets/js/6.74465cf9.js"><link rel="prefetch" href="/assets/js/7.1312578a.js"><link rel="prefetch" href="/assets/js/8.f78c5cf9.js"><link rel="prefetch" href="/assets/js/9.5a96a548.js">
     <link rel="stylesheet" href="/assets/css/0.styles.99d7e448.css">
   </head>
   <body>
@@ -19,11 +19,58 @@
   CSSCODER.pro
   <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/csscoderRU/scss-mix" target="_blank" rel="noopener noreferrer" class="nav-link external">
   GitHub.com
-  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/mixins/" class="sidebar-heading clickable router-link-active open"><span>SCSS Mixins</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/mixins/media_queries/" class="sidebar-link">Media Queries</a></li><li><a href="/mixins/base_container/" class="sidebar-link">Base content container</a></li><li><a href="/mixins/columns/" class="sidebar-link">Columns</a></li><li><a href="/mixins/transitions/" class="sidebar-link">Transitions</a></li><li><a href="/mixins/triangle/" class="sidebar-link">Triangle</a></li><li><a href="/mixins/font_scale/" class="active sidebar-link">Font scale</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/functions/" class="sidebar-heading clickable"><span>SCSS Functions</span> <span class="arrow right"></span></a> <!----></section></li><li><a href="/examples/" class="sidebar-link">Examples using</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="font-scale"><a href="#font-scale" class="header-anchor">#</a> Font scale</h1></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/mixins/" class="sidebar-heading clickable router-link-active open"><span>SCSS Mixins</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/mixins/media_queries/" class="sidebar-link">Media Queries</a></li><li><a href="/mixins/base_container/" class="sidebar-link">Base content container</a></li><li><a href="/mixins/columns/" class="sidebar-link">Columns</a></li><li><a href="/mixins/transitions/" class="sidebar-link">Transitions</a></li><li><a href="/mixins/triangle/" class="sidebar-link">Triangle</a></li><li><a href="/mixins/font_scale/" class="active sidebar-link">Font scale</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/functions/" class="sidebar-heading clickable"><span>SCSS Functions</span> <span class="arrow right"></span></a> <!----></section></li><li><a href="/examples/" class="sidebar-link">Examples using</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="font-scale-mixins"><a href="#font-scale-mixins" class="header-anchor">#</a> Font Scale mixins</h1> <p>By default, we use these variables.</p> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// default variables</span>
+<span class="token property"><span class="token variable">$ss-media-type</span></span><span class="token punctuation">:</span> <span class="token string">'only screen'</span> <span class="token statement keyword">!default</span><span class="token punctuation">;</span>
+<span class="token property"><span class="token variable">$ss-media-breakpoints</span></span><span class="token punctuation">:</span> <span class="token punctuation">(</span>
+  <span class="token property">xs</span><span class="token punctuation">:</span> 480px<span class="token punctuation">,</span>
+  <span class="token property">sm</span><span class="token punctuation">:</span> 576px<span class="token punctuation">,</span>
+  <span class="token property">md</span><span class="token punctuation">:</span> 768px<span class="token punctuation">,</span>
+  <span class="token property">lg</span><span class="token punctuation">:</span> 992px<span class="token punctuation">,</span>
+  <span class="token property">xl</span><span class="token punctuation">:</span> 1200px<span class="token punctuation">,</span>
+  <span class="token property">xxl</span><span class="token punctuation">:</span> 1600px
+<span class="token punctuation">)</span> <span class="token statement keyword">!default</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="font-scale-a-b-c-d"><a href="#font-scale-a-b-c-d" class="header-anchor">#</a> font-scale([a, b, c, d])</h4> <table><thead><tr><th style="text-align:left;">params</th> <th style="text-align:left;">Description</th> <th style="text-align:left;">default</th></tr></thead> <tbody><tr><td style="text-align:left;"><strong>a</strong></td> <td style="text-align:left;">min font size in 'px'</td> <td style="text-align:left;">14px</td></tr> <tr><td style="text-align:left;"><strong>b</strong></td> <td style="text-align:left;">max font size in 'px'</td> <td style="text-align:left;">16px</td></tr> <tr><td style="text-align:left;"><strong>c</strong></td> <td style="text-align:left;">min width when we start scaling (values is name of breackpoints, by default: xs, sm ...)</td> <td style="text-align:left;">xs, or first</td></tr> <tr><td style="text-align:left;"><strong>d</strong></td> <td style="text-align:left;">max width when we start scaling (values is name of breackpoints, by default: xs, sm ...)</td> <td style="text-align:left;">xxl, or last</td></tr></tbody></table> <h4 id="base-using-for-list"><a href="#base-using-for-list" class="header-anchor">#</a> Base using for list</h4> <div class="language-scss extra-class"><div class="highlight-lines"><br><div class="highlighted"> </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlighted"> </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div><pre class="language-scss"><code><span class="token selector">.text </span><span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> font-scale<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// CSS result</span>
+<span class="token selector">.text </span><span class="token punctuation">{</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 14px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@media</span> only screen <span class="token operator">and</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 480px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.text </span><span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span> 0.18vw <span class="token operator">+</span> 13.136px <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@media</span> only screen <span class="token operator">and</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 1600px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.text </span><span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.text2 </span><span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> <span class="token function">font-scale</span><span class="token punctuation">(</span>12px<span class="token punctuation">,</span> 24px<span class="token punctuation">,</span> xs<span class="token punctuation">,</span> lg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// CSS result</span>
+<span class="token selector">.text2 </span><span class="token punctuation">{</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 12px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@media</span> only screen <span class="token operator">and</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 480px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.text2 </span><span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span> 2.34vw <span class="token operator">+</span> 0.768px <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@media</span> only screen <span class="token operator">and</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 992px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.text2 </span><span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 24px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
       ←
       <a href="/mixins/triangle/" class="prev">Triangle</a></span> <span class="next"><a href="/functions/helpers/">Helpers</a>
       →
     </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/assets/js/app.3d2d607b.js" defer></script><script src="/assets/js/2.8e0f1cb4.js" defer></script><script src="/assets/js/14.d6e4fa6a.js" defer></script>
+    <script src="/assets/js/app.08e4270c.js" defer></script><script src="/assets/js/2.8e0f1cb4.js" defer></script><script src="/assets/js/14.0cc25de1.js" defer></script>
   </body>
 </html>
