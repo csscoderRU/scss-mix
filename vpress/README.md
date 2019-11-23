@@ -13,8 +13,7 @@ meta:
   - name: description
     content: Here you can see my SCSS mixins and functions, which I use in my work. Hope it will be helpful.
 ---
-
-<img src="https://mix.csscoder.pro/media/CSSCODER-MIX.jpg" style="display: none">
+<img src="https://dev.csscoder.pro/media/CSSCODER-MIX.jpg" style="display: none">
 
 # SCSS MIX by CSSCODER
 

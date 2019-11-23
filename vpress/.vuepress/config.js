@@ -68,6 +68,14 @@ module.exports = {
         'ga': 'UA-153147993-1'
       }
     ]
-  ]
+  ],
+
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@img': './vpress/media'
+      }
+    }
+  }
 
 };
