@@ -6,6 +6,7 @@ tagline: Will free your time
 actionText: 
 actionLink: /ui/
 title: SCSS MIX | CSSCODER
+description: Here you can see my SCSS mixins and functions, which I use in my work. Hope it will be helpful.
 
 footer: MIT Licensed | Copyright © 2019-present Aleksandr Zidyganov aka CSSCODER
 ---
@@ -23,4 +24,4 @@ For using mixins, <a href="https://raw.githubusercontent.com/csscoderRU/scss-mix
 @import "_csscoder-lib.scss";
 ```
 
-After that, you can use my collection of mixins and functions. About each, you can read In the relevant sections.
+After that, you can use my collection of mixins and functions. About each, you can read in the relevant sections.
