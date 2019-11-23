@@ -213,7 +213,6 @@ $ss-base-font-size: 16px !default;
   }
 }
 
-
 ///* Transitions */
 @mixin tr($props: all, $duration: $ss-tr-duration, $function: $ss-tr-function, $delay: null ) {
 
@@ -242,3 +241,75 @@ $ss-base-font-size: 16px !default;
     }
   }
 }
+
+///* triangle */
+@mixin triangle($direction: down, $size: $ss-base-font-size, $color: #20ba5b){
+  @include triangle_helper($direction, $size, $color, false);
+}
+
+@mixin triangle-em($direction: down, $size: $ss-base-font-size, $color: #20ba5b){
+  @include triangle_helper($direction, $size, $color, true);
+}
+
+@mixin triangle_helper($direction, $size, $color,$isEM: false ){
+  $w: null;
+  $h: null;
+  $c: null;
+
+  $lengthSizeProps: length($size);
+
+  @each $item in $size {
+    $index: index(($size), ($item));
+    $value: _strip-unit($item)*1px;
+    @if $isEM {
+      $value: em($value);
+    }
+    @if($index == 1) {
+      $w: $value;
+      $h: $value;
+      $c: $value;
+    }
+    @if($index == 2) {
+      $h: $value;
+      $c: $value;
+    }
+    @if($index == 3) {
+      $c: $value;
+    }
+  }
+
+  $wHelper: $w;
+  $wHelper2: $c;
+
+  @if ($lengthSizeProps < 3) {
+    $wHelper: _precision_round($w/2, 4);
+    $wHelper2: _precision_round($w/2, 4);
+  } @else {
+    $wHelper: $wHelper - $wHelper2;
+  }
+
+  @if $direction == "down" {
+    border-top: $h solid $color;
+    border-right: $wHelper  solid transparent;
+    border-left: $wHelper2 solid transparent;
+  }
+
+  @if $direction == "up" {
+    border-bottom: $h solid $color;
+    border-right: $wHelper solid transparent;
+    border-left: $wHelper2 solid transparent;
+  }
+
+  @if $direction == "left" {
+    border-right: $h solid $color;
+    border-bottom: $wHelper solid transparent;
+    border-top: $wHelper2 solid transparent;
+  }
+
+  @if $direction == "right" {
+    border-left: $h solid $color;
+    border-bottom: $wHelper solid transparent;
+    border-top: $wHelper2 solid transparent;
+  }
+}
+

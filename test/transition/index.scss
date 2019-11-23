@@ -1,0 +1,17 @@
+@import "../../src/csscoder-lib/csscoder-lib";
+
+.test {
+  @include tr;
+}
+
+.test2 {
+  @include tr(width);
+}
+
+.test3 {
+  @include tr(width height);
+}
+
+.test4 {
+  @include tr(width height, 400, cubic-bezier(1, .5, .8, 1), 100);
+}

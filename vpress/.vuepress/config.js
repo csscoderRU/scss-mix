@@ -7,7 +7,8 @@ module.exports = {
   // base: '/',
   themeConfig: {
     nav: [
-      { text: 'CSSCODER.PRO', link: 'https://csscoder.pro' }
+      { text: 'CSSCODER.pro', link: 'https://csscoder.pro' },
+      { text: 'GitHub.com', link: 'https://github.com/csscoderRU/scss-mix' }
     ],
     sidebar: [
       {

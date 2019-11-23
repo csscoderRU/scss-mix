@@ -8,7 +8,7 @@
   margin-top: 20px;
   height: 20px;
   background-color: green;
-  width: calc(25% - 22.58333px);
+  width: calc(25% - 22.5px);
   margin-right: 30px;
 }
 
@@ -23,9 +23,9 @@
 }
 
 .layout__section-left {
-  width: 21.16667%;
+  width: 21.25%;
   margin-right: 5%;
-  margin-left: 8.66632%;
+  margin-left: 8.75%;
   background-color: red;
   height: 200px;
 }
@@ -35,7 +35,7 @@
 }
 
 .layout__section-right {
-  width: 64.91702%;
+  width: 65%;
   margin-right: 5%;
   background-color: green;
   height: 212px;
