@@ -243,15 +243,8 @@ $ss-base-font-size: 16px !default;
 }
 
 ///* triangle */
-@mixin triangle($direction: down, $size: $ss-base-font-size, $color: #20ba5b){
-  @include triangle_helper($direction, $size, $color, false);
-}
+@mixin triangle($direction: down, $size: 30px, $color: #20ba5b, $isEM: null, $baseFontSize: $ss-base-font-size){
 
-@mixin triangle-em($direction: down, $size: $ss-base-font-size, $color: #20ba5b){
-  @include triangle_helper($direction, $size, $color, true);
-}
-
-@mixin triangle_helper($direction, $size, $color,$isEM: false ){
   $w: null;
   $h: null;
   $c: null;
@@ -262,7 +255,7 @@ $ss-base-font-size: 16px !default;
     $index: index(($size), ($item));
     $value: _strip-unit($item)*1px;
     @if $isEM {
-      $value: em($value);
+      $value: em($value, $baseFontSize);
     }
     @if($index == 1) {
       $w: $value;
