@@ -24,8 +24,7 @@ $ss-base-font-size: 16px !default;
 
 
 #### Base using for list
-```scss
-
+```scss{2,13,24,35}
 .test1 {
   @include triangle;
 }
@@ -66,16 +65,22 @@ $ss-base-font-size: 16px !default;
 // CSS result
 .test4 {
   border-left: 3.75em solid green;
-  border-bottom: 6.25em-1.25em solid transparent;
+  border-bottom: 5em solid transparent;
   border-top: 1.25em solid transparent;
 }
-
 ```
 
 #### Base examples
 <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="csscoder" data-slug-hash="zYYXmWa" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSSCODER MIX - triangle - Ex1">
   <span>See the Pen <a href="https://codepen.io/csscoder/pen/zYYXmWa">
   CSSCODER MIX - triangle - Ex1</a> by Alexander Zidyganov (<a href="https://codepen.io/csscoder">@csscoder</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+
+#### Base examples EM
+<p class="codepen" data-height="406" data-theme-id="dark" data-default-tab="result" data-user="csscoder" data-slug-hash="XWWQxLx" style="height: 406px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSSCODER MIX - triangle - Ex2">
+  <span>See the Pen <a href="https://codepen.io/csscoder/pen/XWWQxLx">
+  CSSCODER MIX - triangle - Ex2</a> by Alexander Zidyganov (<a href="https://codepen.io/csscoder">@csscoder</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
