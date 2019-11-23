@@ -243,6 +243,7 @@ $ss-base-font-size: 16px !default;
 }
 
 ///* triangle */
+///* triangle */
 @mixin triangle($direction: down, $size: 30px, $color: #20ba5b, $isEM: null, $baseFontSize: $ss-base-font-size){
 
   $w: null;
@@ -255,7 +256,7 @@ $ss-base-font-size: 16px !default;
     $index: index(($size), ($item));
     $value: _strip-unit($item)*1px;
     @if $isEM {
-      $value: em($value, $baseFontSize);
+      $value: _precision-round(_strip-unit($value) / _strip-unit($baseFontSize))*1em;
     }
     @if($index == 1) {
       $w: $value;
@@ -275,8 +276,8 @@ $ss-base-font-size: 16px !default;
   $wHelper2: $c;
 
   @if ($lengthSizeProps < 3) {
-    $wHelper: _precision_round($w/2, 4);
-    $wHelper2: _precision_round($w/2, 4);
+    $wHelper: $w/2;
+    $wHelper2: $w/2;
   } @else {
     $wHelper: $wHelper - $wHelper2;
   }
@@ -305,4 +306,3 @@ $ss-base-font-size: 16px !default;
     border-top: $wHelper2 solid transparent;
   }
 }
-
