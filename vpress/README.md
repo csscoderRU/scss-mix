@@ -5,11 +5,16 @@ heroText: SCSS MIXINS
 tagline: Will free your time
 actionText: 
 actionLink: /ui/
-title: SCSS MIX | CSSCODER
+title: SCSS MIX
 description: Here you can see my SCSS mixins and functions, which I use in my work. Hope it will be helpful.
-
 footer: MIT Licensed | Copyright © 2019-present Aleksandr Zidyganov aka CSSCODER
+
+meta:
+  - name: description
+    content: Here you can see my SCSS mixins and functions, which I use in my work. Hope it will be helpful.
 ---
+
+<img src="https://mix.csscoder.pro/media/CSSCODER-MIX.jpg" style="display: none">
 
 # SCSS MIX by CSSCODER
 

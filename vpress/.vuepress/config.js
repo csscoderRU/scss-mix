@@ -1,3 +1,16 @@
+const autometa_options = {
+  site: {
+    name   : 'SCSS MIX',
+    twitter: 'csscoder',
+  },
+  canonical_base: 'https://mix.csscoder.pro',
+  image_sources: [
+    'frontmatter',
+    /!\[.*?\]\((.*?)\)/i,        // markdown image regex
+    /<img.*?src=['"](.*?)['"]/i, // html image regex
+  ],
+};
+
 module.exports = {
   title: 'SCSS MIX',
   description: 'SCSS parts of code, which work in my practice',
@@ -48,6 +61,7 @@ module.exports = {
   },
 
   plugins: [
+    [ 'autometa', autometa_options ],
     [
       '@vuepress/google-analytics',
       {
