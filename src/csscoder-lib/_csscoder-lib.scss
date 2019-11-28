@@ -204,7 +204,14 @@ $ss-base-font-size: 16px !default;
     width: calc(#{$s2 + '%'} - #{$s3 + $unit});
   }
 
-  margin-right: #{$_gutter + $unit};
+  &:nth-child(1n) {
+    margin-right: #{$_gutter + $unit};
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
   &:nth-child(#{$length_line}n) {
     margin-right: 0;
   }
