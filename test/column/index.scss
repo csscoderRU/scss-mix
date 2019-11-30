@@ -1,15 +1,12 @@
 @import "../../src/csscoder-lib/csscoder-lib";
 
-.d {
+.product {
   display: flex;
   flex-wrap: wrap;
-  margin-top: -20px;
+  width: 100%;
 
-  &__i {
-    margin-top: 20px;
-    height: 20px;
-    background-color: green;
-    @include col(3, 4);
+  &__item {
+    margin-top: 10px;
   }
 }
 
@@ -17,16 +14,49 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  &__section-left {
-    @include col(3, 2, 5%);
-    @include col-offset(1, 5%);
-    background-color: red;
-    height: 200px;
-  }
 
-  &__section-right {
-    @include col(8, 2, 5%);
-    background-color: green;
-    height: 212px;
+  &__section {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 50px;
+    padding: 10px;
+    color: #fff;
+    background-color: #5cb85c;
+
+    &--left {
+      @include col(4, 2, 30px);
+    }
+
+    &--right {
+      @include col(8, 2, 30px);
+    }
+  }
+}
+
+.layout2 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  &__section {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 50px;
+    padding: 10px;
+    color: #fff;
+    background-color: #5cb85c;
+
+    &--left {
+      @include col(3, 2, 5%);
+      @include col-offset(1, 5%);
+    }
+
+    &--right {
+      @include col(8, 2, 5%);
+    }
   }
 }
