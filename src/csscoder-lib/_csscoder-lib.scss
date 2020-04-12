@@ -413,3 +413,17 @@ $endBreakPoint: nth(map-values($ss-media-breakpoints), length($ss-media-breakpoi
   font-size:  calc( #{$l} + #{$b + $units} );
 
 }
+
+///* Font scale CSS variables */
+$_width-min-font-scale: nth(map-values($ss-media-breakpoints), 1);
+$_width-max-font-scale: map-get($ss-media-breakpoints, $ss-end-step-font-scale);
+$_width-min-font-scale-strip: _strip-unit($_width-min-font-scale);
+$_width-max-font-scale-strip: _strip-unit($_width-max-font-scale);
+
+@mixin font-scale-var($font-min: 12, $font-max: 16) {
+  --minfz: #{_strip-unit($font-min)};
+  --maxfz: #{_strip-unit($font-max)};
+  font-size: var(--ssfz);
+  // fix for Safari resize re-render box
+  outline: 0.0001vw;
+}

@@ -1,6 +1,6 @@
 const autometa_options = {
   site: {
-    name   : 'SCSS MIX',
+    name   : 'CSSCODER MIX',
     twitter: 'csscoder',
   },
   canonical_base: 'https://mix.csscoder.pro',
@@ -12,7 +12,7 @@ const autometa_options = {
 };
 
 module.exports = {
-  title: 'SCSS MIX',
+  title: 'CSSCODER MIX',
   description: 'SCSS parts of code, which work in my practice',
   port: 9090,
   dest: './docs',
@@ -36,6 +36,7 @@ module.exports = {
           ['/mixins/transitions/', 'Transitions'],
           ['/mixins/triangle/', 'Triangle'],
           ['/mixins/font_scale/', 'Font scale'],
+          ['/mixins/font_scale_variable/', 'Font scale (CSS variables)'],
         ]
       },
       {

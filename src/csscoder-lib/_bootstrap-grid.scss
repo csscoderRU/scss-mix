@@ -1,0 +1,207 @@
+$ss-layout-gutter: 30px !default;
+$ss-columns-size: 12 !default;
+$ss-grid-ie11: true !default;
+
+///* Media queries */
+$ss-media-type: 'only screen' !default;
+$ss-media-breakpoints: (
+  xs: 480px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px
+) !default;
+
+$ss-layout-gutter-half: $ss-layout-gutter / 2;
+
+@function _precision-round($float, $digits: 5) {
+  $pow: _pow(10, $digits);
+
+  @return round($float * $pow) / $pow;
+}
+
+///* Raise a number to a power */
+@function _pow($x, $n) {
+  $result: 1;
+  @for $i from 1 through $n {
+    $result: $result * $x;
+  }
+  @return $result;
+}
+
+///* Remove the unit  */
+@function _strip-unit($value) {
+  @if type-of($value) == 'number' {
+    @return $value / ($value * 0 + 1);
+  }
+  @return $value;
+}
+
+@if not $ss-grid-ie11 {
+  :root {
+    --ss-grid-gutter: #{$ss-layout-gutter};
+    --ss-grid-gutter-half: #{$ss-layout-gutter-half};
+  }
+}
+
+// break row
+.w-100 {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -#{$ss-layout-gutter-half};
+  margin-right: -#{$ss-layout-gutter-half};
+
+  &.no-gutter {
+    margin-left: 0;
+    margin-right: 0;
+
+    @if not $ss-grid-ie11 {
+      --ss-grid-gutter: 0px;
+      --ss-grid-gutter-half: 0px;
+    }
+
+    &>.col,
+    &>[class^=col-] {
+      @if $ss-grid-ie11 {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+  &>.col,
+  &>[class^=col-] {
+    @if $ss-grid-ie11 {
+      padding-left: $ss-layout-gutter-half;
+      padding-right: $ss-layout-gutter-half;
+    } @else {
+      margin-left: var(--ss-grid-gutter-half);
+      margin-right: var(--ss-grid-gutter-half);
+    }
+  }
+}
+
+@mixin _col() {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+@mixin _colWidth($i, $isOffset: false) {
+  $width: _precision-round((100% / $ss-columns-size) * $i );
+
+  @if $isOffset {
+    @if $ss-grid-ie11 {
+      margin-left: #{$width}!important;
+    } @else {
+      margin-left: calc(#{$width} + var(--ss-grid-gutter-half))!important;
+    }
+  } @else {
+    @if $ss-grid-ie11 {
+      flex: 0 0 #{$width};
+      max-width: #{$width};
+    } @else {
+      flex: 0 0 calc(#{$width} - var(--ss-grid-gutter));
+      max-width: calc(#{$width} - var(--ss-grid-gutter));
+    }
+  }
+}
+
+@mixin _colWidthAuto() {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+}
+
+.col {
+  @include _col;
+}
+
+.col-auto {
+  @include _colWidthAuto;
+}
+
+$ss-justify-content: (start, center, end, around, between);
+@each $item in $ss-justify-content {
+  .justify-content-#{$item} {
+    justify-content: $item;
+  }
+}
+
+$ss-align-items-start: (start, center, end);
+@each $item in $ss-align-items-start {
+  .align-items-#{$item} {
+    align-items: $item;
+  }
+}
+
+$ss-display: (flex, block, none, inline, inline-flex, inline-block);
+@each $item in $ss-display {
+  .d-#{$item} {
+    display: $item;
+  }
+}
+
+
+@for $i from 1 through $ss-columns-size {
+  .col-#{$i},
+  .row-cols-#{$i}>*{
+    @include _colWidth($i);
+  }
+  .offset-#{$i} {
+    @include _colWidth($i, true);
+  }
+}
+
+@each $breakpoint, $value_media in $ss-media-breakpoints {
+  @media #{$ss_media_type} and (min-width: $value_media) {
+
+    // col sizes
+    @for $i from 1 through $ss-columns-size {
+      .col-#{$breakpoint}-#{$i},
+      .row-cols-#{$breakpoint}-#{$i}>* {
+        @include _colWidth($i);
+      }
+      .offset-#{$breakpoint}-#{$i} {
+        @include _colWidth($i, true);
+      }
+    }
+
+    // col
+    .col-#{$breakpoint} {
+      @include _col;
+    }
+
+    // col-auto
+    .col-#{$breakpoint}-auto {
+      @include _colWidthAuto;
+    }
+
+    // justify-content
+    @each $item in $ss-justify-content {
+      .justify-content-#{$breakpoint}-#{$item} {
+        justify-content: $item;
+      }
+    }
+
+    // align-items
+    @each $item in $ss-align-items-start {
+      .align-items-#{$breakpoint}-#{$item} {
+        align-items: $item;
+      }
+    }
+
+    // display
+    @each $item in $ss-display {
+      .d-#{$breakpoint}-#{$item} {
+        display: $item;
+      }
+    }
+
+  }
+}

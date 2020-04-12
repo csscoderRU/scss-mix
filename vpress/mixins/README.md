@@ -10,3 +10,4 @@ title: SCSS MIXINS | CSSCODER
 * [Transitions](/mixins/transitions/)
 * [CSS Triangle](/mixins/triangle/)
 * [Font Scale](/mixins/font_scale/)
+* [Font Scale CSS Variables](/mixins/font_scale_variable/)

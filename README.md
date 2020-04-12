@@ -1,4 +1,4 @@
-# SCSS MIX by CSSCODER
+# MIX by CSSCODER
 
 <h3> <a href="http://mix.csscoder.pro/" target="_blank">MIX.CSSCODER.PRO</a> </h3>
 
