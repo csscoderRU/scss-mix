@@ -93,3 +93,11 @@ Adding this part to mixin file - is not correct (a сode duplication occurs)
   outline: 0.0001vw;
 }
 ```
+
+#### Base examples
+<p class="codepen" data-height="478" data-theme-id="2386" data-default-tab="result" data-user="csscoder" data-slug-hash="RwWPVWO" style="height: 478px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSSCODER MIX - Font scale CSS variable - Ex1">
+  <span>See the Pen <a href="https://codepen.io/csscoder/pen/RwWPVWO">
+  CSSCODER MIX - Font scale CSS variable - Ex1</a> by Alexander Zidyganov (<a href="https://codepen.io/csscoder">@csscoder</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
