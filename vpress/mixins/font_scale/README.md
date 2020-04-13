@@ -32,18 +32,21 @@ $ss-end-step-font-scale: xl !default;
 
 
 #### Base using for list
+
 ```scss{2,21}
 .text {
   @include font-scale;
 }
 
 // CSS result
+// outline: 0.0001vw; - this fix for Safari resize calc re-render
 .text {
   font-size: 14px;
 }
 @media only screen and (min-width: 480px) {
   .text {
     font-size: calc( 0.28vw + 12.656px );
+    outline: 0.0001vw;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -63,6 +66,7 @@ $ss-end-step-font-scale: xl !default;
 @media only screen and (min-width: 480px) {
   .text2 {
     font-size: calc( 2.34vw + 0.768px );
+    outline: 0.0001vw;
   }
 }
 @media only screen and (min-width: 992px) {

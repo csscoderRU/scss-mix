@@ -365,6 +365,7 @@ $ss-end-step-font-scale: xl !default;
       $b: abs($b);
       font-size:  calc( #{$l} - #{$b + px} );
     }
+    outline: 0.0001vw;
   }
 
   @include mq($endBreakPoint) {
