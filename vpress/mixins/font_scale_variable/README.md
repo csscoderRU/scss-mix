@@ -18,6 +18,7 @@ $ss-media-breakpoints: (
   xl: 1200px,
   xxl: 1600px
 ) !default;
+$ss-start-step-font-scale: xs !default;
 $ss-end-step-font-scale: xl !default;
 ```
 
@@ -32,13 +33,12 @@ Adding this part to mixin file - is not correct (a сode duplication occurs)
 
 ```scss
 * {
-  --ssfz: calc(
-    ((var(--maxfz) - var(--minfz)) / (#{($_width-max-font-scale-strip - $_width-min-font-scale-strip) / 100 })) * 1vw + (var(--minfz) - ((var(--maxfz) - var(--minfz)) / (#{$_width-max-font-scale-strip - $_width-min-font-scale-strip})) * #{$_width-min-font-scale-strip}) * 1px);
+  --ssfz: calc(var(--minfz) * 1px);
 }
 
-@include mq-less(#{nth(map-keys($ss-media-breakpoints), 1)}) {
+@include mq(#{$ss-start-step-font-scale}) {
   * {
-    --ssfz: calc(var(--minfz) * 1px);
+    --ssfz: calc(((var(--maxfz) - var(--minfz)) / (#{($_font-scale-var-max-width - $_font-scale-var-min-width) / 100 })) * 1vw + (var(--minfz) - ((var(--maxfz) - var(--minfz)) / (#{$_font-scale-var-max-width - $_font-scale-var-min-width})) * #{$_font-scale-var-min-width}) * 1px);
   }
 }
 
@@ -54,12 +54,12 @@ Adding this part to mixin file - is not correct (a сode duplication occurs)
 // CSS result - this part generate from common SCSS file and will work in project for
 // all declaration with font scale by CSS variable
 * {
-  --ssfz: calc(
-    ((var(--maxfz) - var(--minfz)) / (7.2)) * 1vw + (var(--minfz) - ((var(--maxfz) - var(--minfz)) / (720)) * 480) * 1px);
+  --ssfz: calc(var(--minfz) * 1px);
 }
-@media only screen and (max-width: 479px) {
+
+@media only screen and (min-width: 480px) {
   * {
-    --ssfz: calc(var(--minfz) * 1px);
+    --ssfz: calc(((var(--maxfz) - var(--minfz)) / (7.2)) * 1vw + (var(--minfz) - ((var(--maxfz) - var(--minfz)) / (720)) * 480) * 1px);
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -76,7 +76,7 @@ Adding this part to mixin file - is not correct (a сode duplication occurs)
 // outline: 0.0001vw; - this fix for Safari resize calc re-render
 .text {
   --minfz: 22;
-  --maxfz: 134;
+  --maxfz: 46;
   font-size: var(--ssfz);
   outline: 0.0001vw;
 }

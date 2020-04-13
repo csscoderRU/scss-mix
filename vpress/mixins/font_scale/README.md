@@ -18,6 +18,8 @@ $ss-media-breakpoints: (
   xl: 1200px,
   xxl: 1600px
 ) !default;
+$ss-start-step-font-scale: xs !default;
+$ss-end-step-font-scale: xl !default;
 ```
 
 #### font-scale([a, b, c, d])
@@ -25,8 +27,8 @@ $ss-media-breakpoints: (
 | :-------------    |:-------------                         | :----------   |
 | **a**             | min font size in 'px'                 | 14px          |
 | **b**             | max font size in 'px'                 | 16px          |
-| **c**             | min width when we start scaling (values is name of breackpoints, by default: xs, sm ...)       | xs, or first            |
-| **d**             | max width when we start scaling (values is name of breackpoints, by default: xs, sm ...)       | xxl, or last         |
+| **c**             | min width when we start scaling (values is name of breackpoints, by default: xs, sm ...)       | xs       |
+| **d**             | max width when we start scaling (values is name of breackpoints, by default: xs, sm ...)       | xl       |
 
 
 #### Base using for list
@@ -41,10 +43,10 @@ $ss-media-breakpoints: (
 }
 @media only screen and (min-width: 480px) {
   .text {
-    font-size: calc( 0.18vw + 13.136px );
+    font-size: calc( 0.28vw + 12.656px );
   }
 }
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1200px) {
   .text {
     font-size: 16px;
   }
