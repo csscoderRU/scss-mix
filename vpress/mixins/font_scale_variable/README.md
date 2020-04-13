@@ -3,7 +3,7 @@ lang: en-US
 title: SCSS Font Scale Mixin by CSS variables | CSSCODER
 ---
 
-# Font Scale mixins by CSS variables
+# Font Scale mixin by CSS variables (adaptive font size)
 
 By default, we use these variables.
 

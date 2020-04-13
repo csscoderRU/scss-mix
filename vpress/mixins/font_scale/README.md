@@ -3,7 +3,7 @@ lang: en-US
 title: SCSS Font Scale Mixin | CSSCODER
 ---
 
-# Font Scale mixins
+# Font Scale mixin (adaptive font size)
 
 By default, we use these variables.
 
@@ -33,7 +33,7 @@ $ss-end-step-font-scale: xl !default;
 
 #### Base using for list
 
-```scss{2,21}
+```scss{2,23}
 .text {
   @include font-scale;
 }
@@ -75,3 +75,12 @@ $ss-end-step-font-scale: xl !default;
   }
 }
 ```
+
+#### Base examples
+
+<p class="codepen" data-height="477" data-theme-id="2386" data-default-tab="result" data-user="csscoder" data-slug-hash="mdeJxBR" style="height: 477px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSSCODER MIX - Font scale CSS  - Ex2">
+  <span>See the Pen <a href="https://codepen.io/csscoder/pen/mdeJxBR">
+  CSSCODER MIX - Font scale CSS  - Ex2</a> by Alexander Zidyganov (<a href="https://codepen.io/csscoder">@csscoder</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
